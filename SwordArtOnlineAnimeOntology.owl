@@ -1,0 +1,1059 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/jmillantr/ontologies/2022/SwordArtOnlineAnime#"
+     xml:base="http://www.semanticweb.org/jmillantr/ontologies/2022/SwordArtOnlineAnime"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:SwordArtOnlineAnimeOntology="http://www.semanticweb.org/jmillantr/ontologies/2022/SwordArtOnlineAnimeOntology#"
+     xmlns:SwordArtOnlineAnimeOntology1="https://w3id.org/def/SwordArtOnlineAnimeOntology#">
+    <owl:Ontology rdf:about="https://w3id.org/def/SwordArtOnlineAnimeOntology">
+        <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2022-04-01</dc:created>
+        <dc:creator>Jonathan Millan Trujillo</dc:creator>
+        <dc:description xml:lang="en">Ontology based on the world of sword art online to describe the characters, creatures and objects that appear in it.</dc:description>
+        <dc:title xml:lang="en">Sword Art Online Anime Ontology</dc:title>
+        <terms:license xml:lang="en">https://creativecommons.org/licenses/by/4.0/deed.en</terms:license>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/created -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/created"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#sameAs -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#sameAs"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#altLabel -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#altLabel"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/def/SwordArtOnlineAnimeOntology#hasLeader -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/SwordArtOnlineAnimeOntology#hasLeader">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/def/SwordArtOnlineAnimeOntology#hasMember"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/def/SwordArtOnlineAnimeOntology#isLeaderOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/def/SwordArtOnlineAnimeOntology#Clan"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/SwordArtOnlineAnimeOntology#Player"/>
+        <rdfs:comment xml:lang="en">Determine the leaders of a clan.</rdfs:comment>
+        <rdfs:label>hasLeader</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/SwordArtOnlineAnimeOntology#hasMember -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/SwordArtOnlineAnimeOntology#hasMember">
+        <owl:inverseOf rdf:resource="https://w3id.org/def/SwordArtOnlineAnimeOntology#isMemberOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/def/SwordArtOnlineAnimeOntology#Clan"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/SwordArtOnlineAnimeOntology#Player"/>
+        <rdfs:comment xml:lang="en">Determine the members of a clan.</rdfs:comment>
+        <rdfs:label>hasMember</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/SwordArtOnlineAnimeOntology#isFriendOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/SwordArtOnlineAnimeOntology#isFriendOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/def/SwordArtOnlineAnimeOntology#Player"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/SwordArtOnlineAnimeOntology#Player"/>
+        <rdfs:comment xml:lang="en">Determines a player&apos;s friend.</rdfs:comment>
+        <rdfs:label>isFriendOf</rdfs:label>
+        <rdfs:seeAlso>https://dbpedia.org/page/Friendship</rdfs:seeAlso>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/SwordArtOnlineAnimeOntology#isKilledBy -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/SwordArtOnlineAnimeOntology#isKilledBy">
+        <owl:inverseOf rdf:resource="https://w3id.org/def/SwordArtOnlineAnimeOntology#kills"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/def/SwordArtOnlineAnimeOntology#Character"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/SwordArtOnlineAnimeOntology#Character"/>
+        <rdfs:comment xml:lang="en">Determine by whom a character was killed.</rdfs:comment>
+        <rdfs:label>isKilledBy</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/SwordArtOnlineAnimeOntology#isLeaderOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/SwordArtOnlineAnimeOntology#isLeaderOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/def/SwordArtOnlineAnimeOntology#isMemberOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/def/SwordArtOnlineAnimeOntology#Player"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/SwordArtOnlineAnimeOntology#Clan"/>
+        <rdfs:comment xml:lang="en">Determines the clan a player leads.</rdfs:comment>
+        <rdfs:label>isLeaderOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/SwordArtOnlineAnimeOntology#isMemberOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/SwordArtOnlineAnimeOntology#isMemberOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/def/SwordArtOnlineAnimeOntology#Player"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/SwordArtOnlineAnimeOntology#Clan"/>
+        <rdfs:comment xml:lang="en">Determines the clan a player belongs to.</rdfs:comment>
+        <rdfs:label>isMemberOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/SwordArtOnlineAnimeOntology#isOwnedBy -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/SwordArtOnlineAnimeOntology#isOwnedBy">
+        <owl:inverseOf rdf:resource="https://w3id.org/def/SwordArtOnlineAnimeOntology#ownsItem"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/def/SwordArtOnlineAnimeOntology#Item"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/SwordArtOnlineAnimeOntology#Character"/>
+        <rdfs:comment xml:lang="en">Determines which player the item is owned by.</rdfs:comment>
+        <rdfs:label>isOwnedBy</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/SwordArtOnlineAnimeOntology#kills -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/SwordArtOnlineAnimeOntology#kills">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/def/SwordArtOnlineAnimeOntology#Character"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/SwordArtOnlineAnimeOntology#Character"/>
+        <rdfs:comment xml:lang="en">Determine who killed a character.</rdfs:comment>
+        <rdfs:label>kills</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/SwordArtOnlineAnimeOntology#ownsItem -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/SwordArtOnlineAnimeOntology#ownsItem">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/def/SwordArtOnlineAnimeOntology#Character"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/SwordArtOnlineAnimeOntology#Item"/>
+        <rdfs:comment xml:lang="en">Determines an item a player owns.</rdfs:comment>
+        <rdfs:label>ownsItem</rdfs:label>
+        <owl:sameAs>http://purl.org/net/VideoGameOntology#ownsItem</owl:sameAs>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/def/SwordArtOnlineAnimeOntology#hasLevel -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/SwordArtOnlineAnimeOntology#hasLevel">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/def/SwordArtOnlineAnimeOntology#Character"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                    <rdf:Description>
+                        <xsd:minExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</xsd:minExclusive>
+                    </rdf:Description>
+                </owl:withRestrictions>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <rdfs:comment xml:lang="en">Level is a way of quantifying a character&apos;s general power, experience, or ability.</rdfs:comment>
+        <rdfs:label>hasLevel</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/def/SwordArtOnlineAnimeOntology#hasNikname -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/SwordArtOnlineAnimeOntology#hasNikname">
+        <rdfs:domain rdf:resource="https://w3id.org/def/SwordArtOnlineAnimeOntology#Character"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">Some characters are recognized by a nickname, this is usually given by some quality or characteristic of the character.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/def/SwordArtOnlineAnimeOntology#hasRealName -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/SwordArtOnlineAnimeOntology#hasRealName">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/def/SwordArtOnlineAnimeOntology#Player"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">Name of a player in real life (outside the virtual world).</rdfs:comment>
+        <rdfs:label>hasRealName</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/def/SwordArtOnlineAnimeOntology#Armour -->
+
+    <owl:Class rdf:about="https://w3id.org/def/SwordArtOnlineAnimeOntology#Armour">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/SwordArtOnlineAnimeOntology#Equipament"/>
+        <rdfs:comment xml:lang="en">Objects whose main function is to be used as pieces of armor to grant damage reduction or attributes to the wearer.</rdfs:comment>
+        <rdfs:label>Armour</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/SwordArtOnlineAnimeOntology#Back -->
+
+    <owl:Class rdf:about="https://w3id.org/def/SwordArtOnlineAnimeOntology#Back">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/SwordArtOnlineAnimeOntology#NonArmor"/>
+        <rdfs:comment xml:lang="en">Armor piece that is placed on the character cape.</rdfs:comment>
+        <rdfs:label>Back</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/SwordArtOnlineAnimeOntology#Boss -->
+
+    <owl:Class rdf:about="https://w3id.org/def/SwordArtOnlineAnimeOntology#Boss">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/SwordArtOnlineAnimeOntology#NonPlayer"/>
+        <rdfs:comment xml:lang="en">Hostile significant computer-controlled enemy. Bosses are generally far stronger than other opponents the player has faced up to that point and winning requires a greater knowledge of the game&apos;s mechanics.</rdfs:comment>
+        <rdfs:label>Boss</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/SwordArtOnlineAnimeOntology#Bot -->
+
+    <owl:Class rdf:about="https://w3id.org/def/SwordArtOnlineAnimeOntology#Bot">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/SwordArtOnlineAnimeOntology#NonPlayer"/>
+        <rdfs:comment xml:lang="en">A type of artificial intelligence based expert system software that plays a video game in the place of a human.</rdfs:comment>
+        <rdfs:label>Bot</rdfs:label>
+        <owl:sameAs>https://dbpedia.org/page/Video_game_bot</owl:sameAs>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/SwordArtOnlineAnimeOntology#Character -->
+
+    <owl:Class rdf:about="https://w3id.org/def/SwordArtOnlineAnimeOntology#Character">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/SwordArtOnlineAnimeOntology#isKilledBy"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/def/SwordArtOnlineAnimeOntology#Character"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">In a video game context, a character is a person or any other entity acting in a game.</rdfs:comment>
+        <rdfs:label>Character</rdfs:label>
+        <owl:sameAs>http://purl.org/net/VideoGameOntology#Character</owl:sameAs>
+        <owl:sameAs>https://dbpedia.org/page/Game_character</owl:sameAs>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/SwordArtOnlineAnimeOntology#Chest -->
+
+    <owl:Class rdf:about="https://w3id.org/def/SwordArtOnlineAnimeOntology#Chest">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/SwordArtOnlineAnimeOntology#Armour"/>
+        <rdfs:comment xml:lang="en">Armor piece that is placed on the character&apos;s chest.</rdfs:comment>
+        <rdfs:label>Chest</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/SwordArtOnlineAnimeOntology#Clan -->
+
+    <owl:Class rdf:about="https://w3id.org/def/SwordArtOnlineAnimeOntology#Clan">
+        <rdfs:comment xml:lang="en">Organized group of players who regularly play together. These clans can have different purposes, advance in the game, attack other players, or just hang out together.</rdfs:comment>
+        <rdfs:label>Clan</rdfs:label>
+        <owl:sameAs>https://en.wikipedia.org/wiki/Clan_(video_games)</owl:sameAs>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/SwordArtOnlineAnimeOntology#Consumable -->
+
+    <owl:Class rdf:about="https://w3id.org/def/SwordArtOnlineAnimeOntology#Consumable">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/SwordArtOnlineAnimeOntology#Item"/>
+        <rdfs:comment xml:lang="en">Objects that can be used on oneself or others.</rdfs:comment>
+        <rdfs:label>Consumable</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/SwordArtOnlineAnimeOntology#Dagger -->
+
+    <owl:Class rdf:about="https://w3id.org/def/SwordArtOnlineAnimeOntology#Dagger">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/SwordArtOnlineAnimeOntology#OneHanded"/>
+        <rdfs:comment xml:lang="en">A fighting knife with a very sharp point and usually two sharp edges.</rdfs:comment>
+        <rdfs:label>Dagger</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/SwordArtOnlineAnimeOntology#Equipament -->
+
+    <owl:Class rdf:about="https://w3id.org/def/SwordArtOnlineAnimeOntology#Equipament">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/SwordArtOnlineAnimeOntology#Item"/>
+        <rdfs:comment xml:lang="en">Items that a character can carry, either on their body or in their hands.</rdfs:comment>
+        <rdfs:label>Equipament</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/SwordArtOnlineAnimeOntology#Feet -->
+
+    <owl:Class rdf:about="https://w3id.org/def/SwordArtOnlineAnimeOntology#Feet">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/SwordArtOnlineAnimeOntology#Armour"/>
+        <rdfs:comment xml:lang="en">Armor piece that is placed on the character&apos;s feet.</rdfs:comment>
+        <rdfs:label>Feet</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/SwordArtOnlineAnimeOntology#Finger -->
+
+    <owl:Class rdf:about="https://w3id.org/def/SwordArtOnlineAnimeOntology#Finger">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/SwordArtOnlineAnimeOntology#NonArmor"/>
+        <rdfs:comment xml:lang="en">Armor piece that is placed on the character&apos;s fingers.</rdfs:comment>
+        <rdfs:label>Finger</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/SwordArtOnlineAnimeOntology#GreatAxe -->
+
+    <owl:Class rdf:about="https://w3id.org/def/SwordArtOnlineAnimeOntology#GreatAxe">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/SwordArtOnlineAnimeOntology#TwoHanded"/>
+        <rdfs:comment xml:lang="en">Large and heavy battle axe used to cut armor.</rdfs:comment>
+        <rdfs:label>GreatAxe</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/SwordArtOnlineAnimeOntology#GreenPlayer -->
+
+    <owl:Class rdf:about="https://w3id.org/def/SwordArtOnlineAnimeOntology#GreenPlayer">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/SwordArtOnlineAnimeOntology#Player"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/def/SwordArtOnlineAnimeOntology#RedPlayer"/>
+        <rdfs:comment xml:lang="en">They are the players who have not killed another player</rdfs:comment>
+        <rdfs:label>GreenPlayer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/SwordArtOnlineAnimeOntology#Hands -->
+
+    <owl:Class rdf:about="https://w3id.org/def/SwordArtOnlineAnimeOntology#Hands">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/SwordArtOnlineAnimeOntology#Armour"/>
+        <rdfs:comment xml:lang="en">Armor piece that is placed on the character&apos;s hands.</rdfs:comment>
+        <rdfs:label>Hands</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/SwordArtOnlineAnimeOntology#Hatchet -->
+
+    <owl:Class rdf:about="https://w3id.org/def/SwordArtOnlineAnimeOntology#Hatchet">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/SwordArtOnlineAnimeOntology#OneHanded"/>
+        <rdfs:comment xml:lang="en">Small axe used as a weapon.</rdfs:comment>
+        <rdfs:label>Hatchet</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/SwordArtOnlineAnimeOntology#Head -->
+
+    <owl:Class rdf:about="https://w3id.org/def/SwordArtOnlineAnimeOntology#Head">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/SwordArtOnlineAnimeOntology#Armour"/>
+        <rdfs:comment xml:lang="en">Armor piece that is placed on the character&apos;s head.</rdfs:comment>
+        <rdfs:label>Head</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/SwordArtOnlineAnimeOntology#Item -->
+
+    <owl:Class rdf:about="https://w3id.org/def/SwordArtOnlineAnimeOntology#Item">
+        <rdfs:comment xml:lang="en">Object within the game world that can be collected by a player, it can be anything that can be used or carried by a character.</rdfs:comment>
+        <rdfs:label>Item</rdfs:label>
+        <owl:sameAs>http://purl.org/net/VideoGameOntology#Item</owl:sameAs>
+        <owl:sameAs>https://dbpedia.org/page/Item_(game_terminology)</owl:sameAs>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/SwordArtOnlineAnimeOntology#Legs -->
+
+    <owl:Class rdf:about="https://w3id.org/def/SwordArtOnlineAnimeOntology#Legs">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/SwordArtOnlineAnimeOntology#Armour"/>
+        <rdfs:comment xml:lang="en">Armor piece that is placed on the character&apos;s legs.</rdfs:comment>
+        <rdfs:label>Legs</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/SwordArtOnlineAnimeOntology#Material -->
+
+    <owl:Class rdf:about="https://w3id.org/def/SwordArtOnlineAnimeOntology#Material">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/SwordArtOnlineAnimeOntology#Item"/>
+        <rdfs:comment xml:lang="en">Objects used as material in the manufacture of other objects.</rdfs:comment>
+        <rdfs:label>Material</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/SwordArtOnlineAnimeOntology#Miscelanea -->
+
+    <owl:Class rdf:about="https://w3id.org/def/SwordArtOnlineAnimeOntology#Miscelanea">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/SwordArtOnlineAnimeOntology#Item"/>
+        <rdfs:comment xml:lang="en">Objects without any specific function, they are generally decorative.</rdfs:comment>
+        <rdfs:label>Miscelanea</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/SwordArtOnlineAnimeOntology#Mob -->
+
+    <owl:Class rdf:about="https://w3id.org/def/SwordArtOnlineAnimeOntology#Mob">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/SwordArtOnlineAnimeOntology#NonPlayer"/>
+        <rdfs:comment xml:lang="en">Hostile generic type of monster that the player is expected to hunt and kill, excluding NPCs that engage in dialog, sell items, or NPCs which cannot be attacked.</rdfs:comment>
+        <rdfs:label>Mob</rdfs:label>
+        <owl:sameAs>https://dbpedia.org/page/Mob_(video_games)</owl:sameAs>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/SwordArtOnlineAnimeOntology#Neck -->
+
+    <owl:Class rdf:about="https://w3id.org/def/SwordArtOnlineAnimeOntology#Neck">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/SwordArtOnlineAnimeOntology#NonArmor"/>
+        <rdfs:comment xml:lang="en">Armor piece that is placed on the character&apos;s neck.</rdfs:comment>
+        <rdfs:label>Neck</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/SwordArtOnlineAnimeOntology#NonArmor -->
+
+    <owl:Class rdf:about="https://w3id.org/def/SwordArtOnlineAnimeOntology#NonArmor">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/SwordArtOnlineAnimeOntology#Equipament"/>
+        <rdfs:comment xml:lang="en">Objects whose main function is to be used as pieces of armor to grant attributes or abilities to the wearer. These pieces do not grant any damage reduction.</rdfs:comment>
+        <rdfs:label>NonArmor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/SwordArtOnlineAnimeOntology#NonPlayer -->
+
+    <owl:Class rdf:about="https://w3id.org/def/SwordArtOnlineAnimeOntology#NonPlayer">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/SwordArtOnlineAnimeOntology#Character"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/def/SwordArtOnlineAnimeOntology#Player"/>
+        <rdfs:comment xml:lang="en">A non-player character (NPC) is any character in a game that is not controlled by a player.</rdfs:comment>
+        <rdfs:label>NonPlayer</rdfs:label>
+        <owl:sameAs>https://dbpedia.org/page/Non-player_character</owl:sameAs>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/SwordArtOnlineAnimeOntology#OneHanded -->
+
+    <owl:Class rdf:about="https://w3id.org/def/SwordArtOnlineAnimeOntology#OneHanded">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/SwordArtOnlineAnimeOntology#Weapon"/>
+        <rdfs:comment xml:lang="en">Weapons that can be held and used with one hand.</rdfs:comment>
+        <rdfs:label>OneHanded</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/SwordArtOnlineAnimeOntology#Player -->
+
+    <owl:Class rdf:about="https://w3id.org/def/SwordArtOnlineAnimeOntology#Player">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/SwordArtOnlineAnimeOntology#Character"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/SwordArtOnlineAnimeOntology#isLeaderOf"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/def/SwordArtOnlineAnimeOntology#Clan"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/SwordArtOnlineAnimeOntology#isMemberOf"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/def/SwordArtOnlineAnimeOntology#Clan"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A player character is a fictional character in a video game.</rdfs:comment>
+        <rdfs:label>Player</rdfs:label>
+        <owl:sameAs>http://purl.org/net/VideoGameOntology#Player</owl:sameAs>
+        <owl:sameAs>https://dbpedia.org/page/Player_character</owl:sameAs>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/SwordArtOnlineAnimeOntology#Rapier -->
+
+    <owl:Class rdf:about="https://w3id.org/def/SwordArtOnlineAnimeOntology#Rapier">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/SwordArtOnlineAnimeOntology#OneHanded"/>
+        <rdfs:comment xml:lang="en">A type of sword with a thin and sharp two-edged blade, characterized in that it can be used with quick movements.</rdfs:comment>
+        <rdfs:label>Rapier</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/SwordArtOnlineAnimeOntology#RedPlayer -->
+
+    <owl:Class rdf:about="https://w3id.org/def/SwordArtOnlineAnimeOntology#RedPlayer">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/SwordArtOnlineAnimeOntology#Player"/>
+        <rdfs:comment xml:lang="en">They are the players who have killed another player</rdfs:comment>
+        <rdfs:label>RedPlayer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/SwordArtOnlineAnimeOntology#Shield -->
+
+    <owl:Class rdf:about="https://w3id.org/def/SwordArtOnlineAnimeOntology#Shield">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/SwordArtOnlineAnimeOntology#OneHanded"/>
+        <rdfs:comment xml:lang="en">A piece of personal armour held in the hand, which may or may not be strapped to the wrist or forearm. Shields are used to intercept specific attacks, whether from close-ranged weaponry or projectiles such as arrows, by means of active blocks, as well as to provide passive protection by closing one or more lines of engagement during combat.</rdfs:comment>
+        <rdfs:label>Shield</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/SwordArtOnlineAnimeOntology#Shoulders -->
+
+    <owl:Class rdf:about="https://w3id.org/def/SwordArtOnlineAnimeOntology#Shoulders">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/SwordArtOnlineAnimeOntology#Armour"/>
+        <rdfs:comment xml:lang="en">Armor piece that is placed on the shoulders of the character.</rdfs:comment>
+        <rdfs:label>Shoulders</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/SwordArtOnlineAnimeOntology#Spear -->
+
+    <owl:Class rdf:about="https://w3id.org/def/SwordArtOnlineAnimeOntology#Spear">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/SwordArtOnlineAnimeOntology#TwoHanded"/>
+        <rdfs:comment xml:lang="en">A spear is a pole weapon consisting of a shaft, usually of wood, with a pointed head.</rdfs:comment>
+        <rdfs:label>Spear</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/SwordArtOnlineAnimeOntology#Sword -->
+
+    <owl:Class rdf:about="https://w3id.org/def/SwordArtOnlineAnimeOntology#Sword">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/SwordArtOnlineAnimeOntology#OneHanded"/>
+        <rdfs:comment xml:lang="en">A sword is an edged, bladed weapon intended for manual cutting or thrusting. Its blade, longer than a knife or dagger.</rdfs:comment>
+        <rdfs:label>Sword</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/SwordArtOnlineAnimeOntology#TwoHanded -->
+
+    <owl:Class rdf:about="https://w3id.org/def/SwordArtOnlineAnimeOntology#TwoHanded">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/SwordArtOnlineAnimeOntology#Weapon"/>
+        <rdfs:comment xml:lang="en">Weapons that only can be held and used with two hands.</rdfs:comment>
+        <rdfs:label>TwoHanded</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/SwordArtOnlineAnimeOntology#Waist -->
+
+    <owl:Class rdf:about="https://w3id.org/def/SwordArtOnlineAnimeOntology#Waist">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/SwordArtOnlineAnimeOntology#Armour"/>
+        <rdfs:comment xml:lang="en">Armor piece that is placed on the character&apos;s wrists.</rdfs:comment>
+        <rdfs:label>Waist</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/SwordArtOnlineAnimeOntology#WarHammer -->
+
+    <owl:Class rdf:about="https://w3id.org/def/SwordArtOnlineAnimeOntology#WarHammer">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/SwordArtOnlineAnimeOntology#TwoHanded"/>
+        <rdfs:comment xml:lang="en">Large, heavy battle hammer used to cause concussions through armor.</rdfs:comment>
+        <rdfs:label>WarHammer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/SwordArtOnlineAnimeOntology#Weapon -->
+
+    <owl:Class rdf:about="https://w3id.org/def/SwordArtOnlineAnimeOntology#Weapon">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/SwordArtOnlineAnimeOntology#Equipament"/>
+        <rdfs:comment xml:lang="en">Objects whose main function is to be used as a weapon to cause damage to a target.</rdfs:comment>
+        <rdfs:label>Weapon</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/def/SwordArtOnlineAnimeOntology#Asuna -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/SwordArtOnlineAnimeOntology#Asuna">
+        <rdf:type rdf:resource="https://w3id.org/def/SwordArtOnlineAnimeOntology#Player"/>
+        <SwordArtOnlineAnimeOntology1:isFriendOf rdf:resource="https://w3id.org/def/SwordArtOnlineAnimeOntology#Kirito"/>
+        <SwordArtOnlineAnimeOntology1:isMemberOf rdf:resource="https://w3id.org/def/SwordArtOnlineAnimeOntology#Knights_of_the_Blood"/>
+        <SwordArtOnlineAnimeOntology1:ownsItem rdf:resource="https://w3id.org/def/SwordArtOnlineAnimeOntology#Lambent_Light"/>
+        <SwordArtOnlineAnimeOntology1:hasLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">38</SwordArtOnlineAnimeOntology1:hasLevel>
+        <SwordArtOnlineAnimeOntology1:hasNikname>The Flash</SwordArtOnlineAnimeOntology1:hasNikname>
+        <SwordArtOnlineAnimeOntology1:hasRealName>Yuuki Asuna</SwordArtOnlineAnimeOntology1:hasRealName>
+        <rdfs:comment xml:lang="en">Secondary character of the series.</rdfs:comment>
+        <owl:sameAs>https://dbpedia.org/page/Asuna_(Sword_Art_Online)</owl:sameAs>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/SwordArtOnlineAnimeOntology#Blade_of_Frost_Steel -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/SwordArtOnlineAnimeOntology#Blade_of_Frost_Steel">
+        <rdf:type rdf:resource="https://w3id.org/def/SwordArtOnlineAnimeOntology#Sword"/>
+        <rdfs:comment xml:lang="en">Sword used by Kirito against Nicholas The Renegade.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/SwordArtOnlineAnimeOntology#Divine_Stone_of_Returning_Soul -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/SwordArtOnlineAnimeOntology#Divine_Stone_of_Returning_Soul">
+        <rdf:type rdf:resource="https://w3id.org/def/SwordArtOnlineAnimeOntology#Consumable"/>
+        <rdfs:comment xml:lang="en">Item that can bring back to life a player who has died within 10 seconds.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/SwordArtOnlineAnimeOntology#Heathcliff -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/SwordArtOnlineAnimeOntology#Heathcliff">
+        <rdf:type rdf:resource="https://w3id.org/def/SwordArtOnlineAnimeOntology#Player"/>
+        <SwordArtOnlineAnimeOntology1:isKilledBy rdf:resource="https://w3id.org/def/SwordArtOnlineAnimeOntology#Kirito"/>
+        <SwordArtOnlineAnimeOntology1:isLeaderOf rdf:resource="https://w3id.org/def/SwordArtOnlineAnimeOntology#Knights_of_the_Blood"/>
+        <SwordArtOnlineAnimeOntology1:hasLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">53</SwordArtOnlineAnimeOntology1:hasLevel>
+        <SwordArtOnlineAnimeOntology1:hasNikname>The Living Legend</SwordArtOnlineAnimeOntology1:hasNikname>
+        <SwordArtOnlineAnimeOntology1:hasNikname>The Paladin</SwordArtOnlineAnimeOntology1:hasNikname>
+        <SwordArtOnlineAnimeOntology1:hasNikname>The Strongest Man</SwordArtOnlineAnimeOntology1:hasNikname>
+        <SwordArtOnlineAnimeOntology1:hasRealName>Akihiko Kayaba</SwordArtOnlineAnimeOntology1:hasRealName>
+        <rdfs:comment xml:lang="en">Secondary character of the series.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/SwordArtOnlineAnimeOntology#Keita -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/SwordArtOnlineAnimeOntology#Keita">
+        <rdf:type rdf:resource="https://w3id.org/def/SwordArtOnlineAnimeOntology#Player"/>
+        <SwordArtOnlineAnimeOntology1:isMemberOf rdf:resource="https://w3id.org/def/SwordArtOnlineAnimeOntology#Moonlit_Black_Cats"/>
+        <SwordArtOnlineAnimeOntology1:hasLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">28</SwordArtOnlineAnimeOntology1:hasLevel>
+        <rdfs:comment xml:lang="en">Additional character of the series.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/SwordArtOnlineAnimeOntology#Kirito -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/SwordArtOnlineAnimeOntology#Kirito">
+        <rdf:type rdf:resource="https://w3id.org/def/SwordArtOnlineAnimeOntology#Player"/>
+        <SwordArtOnlineAnimeOntology1:kills rdf:resource="https://w3id.org/def/SwordArtOnlineAnimeOntology#Nicholas_The_Renegade"/>
+        <SwordArtOnlineAnimeOntology1:ownsItem rdf:resource="https://w3id.org/def/SwordArtOnlineAnimeOntology#Blade_of_Frost_Steel"/>
+        <SwordArtOnlineAnimeOntology1:hasLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">47</SwordArtOnlineAnimeOntology1:hasLevel>
+        <SwordArtOnlineAnimeOntology1:hasNikname>Beater</SwordArtOnlineAnimeOntology1:hasNikname>
+        <SwordArtOnlineAnimeOntology1:hasNikname>Blackie</SwordArtOnlineAnimeOntology1:hasNikname>
+        <SwordArtOnlineAnimeOntology1:hasNikname>The Black Swordsman</SwordArtOnlineAnimeOntology1:hasNikname>
+        <SwordArtOnlineAnimeOntology1:hasRealName>Kirigaya Kazuto</SwordArtOnlineAnimeOntology1:hasRealName>
+        <rdfs:comment xml:lang="en">Main character of the series.</rdfs:comment>
+        <owl:sameAs>https://dbpedia.org/page/Kirito_(Sword_Art_Online)</owl:sameAs>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/SwordArtOnlineAnimeOntology#Knights_of_the_Blood -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/SwordArtOnlineAnimeOntology#Knights_of_the_Blood">
+        <rdf:type rdf:resource="https://w3id.org/def/SwordArtOnlineAnimeOntology#Clan"/>
+        <rdfs:comment xml:lang="en">Primarily raiding brotherhood, made up of elite members.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/SwordArtOnlineAnimeOntology#Lambent_Light -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/SwordArtOnlineAnimeOntology#Lambent_Light">
+        <rdf:type rdf:resource="https://w3id.org/def/SwordArtOnlineAnimeOntology#Rapier"/>
+        <rdfs:comment xml:lang="en">A rapier crafted by Lisbeth for Asuna.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/SwordArtOnlineAnimeOntology#Moonlit_Black_Cats -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/SwordArtOnlineAnimeOntology#Moonlit_Black_Cats">
+        <rdf:type rdf:resource="https://w3id.org/def/SwordArtOnlineAnimeOntology#Clan"/>
+        <rdfs:comment xml:lang="en">Secondary clan of the series.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/SwordArtOnlineAnimeOntology#Nicholas_The_Renegade -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/SwordArtOnlineAnimeOntology#Nicholas_The_Renegade">
+        <rdf:type rdf:resource="https://w3id.org/def/SwordArtOnlineAnimeOntology#Boss"/>
+        <SwordArtOnlineAnimeOntology1:ownsItem rdf:resource="https://w3id.org/def/SwordArtOnlineAnimeOntology#Divine_Stone_of_Returning_Soul"/>
+        <SwordArtOnlineAnimeOntology1:hasLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">32</SwordArtOnlineAnimeOntology1:hasLevel>
+        <rdfs:comment xml:lang="en">Christmas Event Special Boss.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/def/SwordArtOnlineAnimeOntology#Character"/>
+            <rdf:Description rdf:about="https://w3id.org/def/SwordArtOnlineAnimeOntology#Clan"/>
+            <rdf:Description rdf:about="https://w3id.org/def/SwordArtOnlineAnimeOntology#Item"/>
+        </owl:members>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="urn:swrl:var#x">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#c">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#y">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#p">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#i">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:comment xml:lang="en">All members of the same clan are friends.</rdfs:comment>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://w3id.org/def/SwordArtOnlineAnimeOntology#isMemberOf"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#x"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#c"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="https://w3id.org/def/SwordArtOnlineAnimeOntology#isMemberOf"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#y"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#c"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="https://w3id.org/def/SwordArtOnlineAnimeOntology#Clan"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl:var#c"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DifferentIndividualsAtom"/>
+                                                <swrl:argument1 rdf:resource="urn:swrl:var#x"/>
+                                                <swrl:argument2 rdf:resource="urn:swrl:var#y"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://w3id.org/def/SwordArtOnlineAnimeOntology#isFriendOf"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#x"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#y"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:comment xml:lang="en">If a player kills another player, the player is a red player.</rdfs:comment>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="https://w3id.org/def/SwordArtOnlineAnimeOntology#Player"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#p"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="https://w3id.org/def/SwordArtOnlineAnimeOntology#kills"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#p"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#x"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="https://w3id.org/def/SwordArtOnlineAnimeOntology#Player"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl:var#x"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="https://w3id.org/def/SwordArtOnlineAnimeOntology#RedPlayer"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#p"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:comment xml:lang="en">When a player kills another player, they have the items of the player they killed.</rdfs:comment>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://w3id.org/def/SwordArtOnlineAnimeOntology#kills"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#p"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#c"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="https://w3id.org/def/SwordArtOnlineAnimeOntology#Player"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#p"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="https://w3id.org/def/SwordArtOnlineAnimeOntology#ownsItem"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl:var#c"/>
+                                        <swrl:argument2 rdf:resource="urn:swrl:var#i"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://w3id.org/def/SwordArtOnlineAnimeOntology#ownsItem"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#p"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#i"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
